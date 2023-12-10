@@ -26,6 +26,7 @@
     <input type="number" id="guess" name="guess" min="0" max="10" step="1" maxlength="1" required >
     <p>Click the button below to try your luck!!</p>
     <button onclick="checkGuess()">Check</button>
+    <div id="answer"></div>
     </form>
     <script>
         // Generate a random integer between 1 and 10 (inclusive)
@@ -45,10 +46,12 @@
                
                // Log a message if the guessed number matches the random number
                console.log('Matched');
+               document.getElementById('answer').innerHTML = 'Matched you won'
             }else{
                 
                 // Log a message if the guessed number does not match, and also provide the correct number
                     console.log('Not matched, the number was ' + num); 
+                    document.getElementById('answer').innerHTML= 'Not matched, the number was ' + num + " " +"try agin next time "
             }
 
           
