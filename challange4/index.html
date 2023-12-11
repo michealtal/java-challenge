@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>guest</title>
+    <style>
+        body{
+            background-color: aqua;
+            display: flex;
+            
+        }
+        form{
+            width:500px;
+            margin: 0 auto;
+            margin-top: 50px;
+            color: white;
+            padding: 20px;
+            background:linear-gradient(40deg,purple , black ) ;
+        }
+        form input{
+            margin-left: 50px;
+            padding: 10px 15px;
+            font-size: 20px;
+            border: 1px solid;
+            border-radius: 10px;
+            border-color: black;
+            border-style:inset;
+        }
+        form button{
+            margin-left: 150px;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            padding: 10px 15px;
+            font-family: sans-serif;
+            font-size: 20px;
+            border: 1px solid;
+            border-radius: 10px;
+            background-color: aqua;
+            border-style:inset;
+        }
+        .typewriter h1,h2,h3 {
+  overflow: hidden; /* Hide overflowing text */
+  border-right: .15em solid black; /* Cursor blink effect */
+  white-space: nowrap; /* Prevent wrapping of text */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  font-size: 2em; /* Adjust font size */
+  animation: typing 3s steps(40) ;
+}
+
+/* Keyframes for typing animation */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+        
+    </style>
+</head>
+<body>
+    <form id="form" onsubmit="event.preventDefault()" >
+        <div class="typewriter">
+        <h1>Welcome To</h1>
+        <h1> Ay Live Show Comedy shut down </h1>
+        <h1>Please enter your do not disclose pin behind your invitation card here please  </h1><br>
+        </div>
+         <input type="text" id="userInput" placeholder="insert pin" value=""><br>
+         <button onclick="MyWelcome();console.log(Demo.value, 'demo')">Submit</button>
+         <p id="result"></p>
+    </form>
+    <script>
+        const Demo = document.getElementById("userInput")
+       
+        const MyWelcome = () => {
+     const Welcome = "Demo" ;
+    switch (Demo.value) {
+       case "1223" :document.getElementById("result").innerHTML= "Welcome to Ay life you may enter<br/>";
+       break;
+       case "1111" :document.getElementById("result").innerHTML= "Welcome to Ay life VIP class 1 you may enter your table is on the right please do fell comfortable  <br/>";
+       break;
+       case "2222" :document.getElementById("result").innerHTML= "Welcome to Ay life VIP class 2 you may enter your table is on the left please do feel comfortable<br/>";
+       break;
+       case "1212" :document.getElementById("result").innerHTML= "Welcome to Ay life V_VIP you may enter your table is a silver table on the left side of the stage please do feel comfortable and enjoy your night <br/>";
+       break;
+       case "5432" :document.getElementById("result").innerHTML= "Welcome to Ay life Guest Of Honour you may enter, your table is a Golden table on the right sClasse of the stage please do feel comfortable and enjoy your night<br/>";
+       break;
+       default: document.getElementById('result').innerHTML="wrong pin does not belong to any class input correct pin"
+    }
+
+}
+
+    </script>
+</body>
+</html>
