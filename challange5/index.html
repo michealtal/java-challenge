@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge_5</title>
+</head>
+<body>
+   <h1> Challenge 5 </h1>
+   <!-- <script>
+    // write a script that replace each letter in the word "chair" with letter next to it in english 
+   </script> -->
+
+   <!-- write a script that uses a given word to form new word.your script should remove the first and the last characters of the given word if the first or the last character is "a" return the initial word if the condition evaluates false   -->
+   <script>
+
+// define a function named nop with parameter str 
+// const noa = (str) => {
+//     initialize start_aos and end_aos with default value 
+//     let start_aos = 0;
+//     let end_aos = str.length;
+
+//     // check if the first chracter is 'a' and update start_aos if true 
+
+//     if(str.length>0 && str.charAt(0) === "A"){
+//        end_aos--;
+//     }
+//     // check if the last character is 'A' and update end_pos if true 
+//     if(str.length > 1 && str.charAt(str.length - 1) === "A"){
+//         end_aos--;
+//     }
+//     //  Return the substring based on start_pos and end_pos
+//     return str.substring (start_aos, end_aos);
+// }
+
+
+const noa = (srt) => {
+ let start_pos = 0;
+ let end_pos = srt.length;
+
+ if(srt.length > 0 && srt.charAt(0) === "A"){
+    end_pos--;
+ }
+
+ if(srt.length > 1 && srt.charAt(-1)==="A"){
+    end_pos--;
+ }
+ return srt.substring(start_pos, end_pos);
+}
+// call the function with sample 
+console.log(noa("Aplana"));
+console.log(noa("Anthra"));
+console.log(noa("JavaScript"));
+   </script>
+</body>
+</html>

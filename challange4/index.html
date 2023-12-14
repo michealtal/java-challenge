@@ -40,16 +40,16 @@
             border-style:inset;
         }
         .typewriter h1,h2,h3 {
-  overflow: hidden; /* Hide overflowing text */
-  border-right: .15em solid black; /* Cursor blink effect */
-  white-space: nowrap; /* Prevent wrapping of text */
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
-  font-size: 2em; /* Adjust font size */
+  overflow: hidden;
+  border-right: .15em solid black; 
+  white-space: nowrap; 
+  margin: 0; 
+  padding: 0; 
+  font-size: 2em; 
   animation: typing 3s steps(40) ;
 }
 
-/* Keyframes for typing animation */
+
 @keyframes typing {
   from { width: 0; }
   to { width: 100%; }
@@ -65,7 +65,7 @@
         <h1>Please enter your do not disclose pin behind your invitation card here please  </h1><br>
         </div>
          <input type="text" id="userInput" placeholder="insert pin" value=""><br>
-         <button onclick="MyWelcome();console.log(Demo.value, 'demo')">Submit</button>
+         <button onclick="MyWelcome();console.log(Demo.value)">Submit</button>
          <p id="result"></p>
     </form>
     <script>
@@ -82,7 +82,7 @@
        break;
        case "1212" :document.getElementById("result").innerHTML= "Welcome to Ay life V_VIP you may enter your table is a silver table on the left side of the stage please do feel comfortable and enjoy your night <br/>";
        break;
-       case "5432" :document.getElementById("result").innerHTML= "Welcome to Ay life Guest Of Honour you may enter, your table is a Golden table on the right sClasse of the stage please do feel comfortable and enjoy your night<br/>";
+       case "5432" :document.getElementById("result").innerHTML= "Welcome to Ay life Guest Of Honour you may enter, your table is a Golden table on the right Side of the stage please do feel comfortable and enjoy your night<br/>";
        break;
        default: document.getElementById('result').innerHTML="wrong pin does not belong to any class input correct pin"
     }
