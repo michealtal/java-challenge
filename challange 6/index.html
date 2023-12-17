@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>answer card</title>
+    <link rel="stylesheet" href="myStyle.css">
+</head>
+<body>
+<div class="card">
+ <div class="typewriter">
+    <h1>FAQ <br/>FREQUENTLY - ASKED-QUESTION</h1>
+ </div>
+ <div>
+   
+   <div class="question" onclick="myAnswer('answer')">
+    <h3 >Question 1: "What sets your company apart from your competitors?"</h3>
+   <span id="answer"  style="display: none; background-color: white; color: black;"> Answer: Our company differentiates itself through our innovative approach, exceptional customer service, and commitment to sustainability.</span>
+    </div>
+    <div class="question" onclick="myAnswer('answer2')">
+   <h3> Question 2: "How can I get in touch with your customer support team?"</h3>
+    
+    <span id="answer2" style="display: none; background-color: white; color: black;">Answer: You can reach our customer support team by phone, email, or through our online chat feature on our website.</span>
+    </div>
+    <div class="question" onclick="myAnswer('answer3')">
+    <h3 >Question 3: "What is your company's return policy?"</h3>
+    
+    <span id="answer3" style="display: none; background-color: white; color: black;">Answer : Our return policy allows for returns within 30 days of purchase with a valid receipt, and we offer a full refund or exchange for eligible items.</span>
+    </div>
+     <div class="question" onclick="myAnswer('answer4')">
+    <h3 >Question 4: "What measures does your company take to ensure product quality and safety?"</h3>
+    
+   <span id="answer4" style="display: none; background-color: white; color: black;">Answer: We uphold rigorous quality control standards and conduct regular safety testing to ensure that our products meet the highest safety and quality benchmarks.</span> 
+    </div>
+      <div class="question" onclick="myAnswer('answer5')">
+    <h3 >Question 5: "Can you provide more information about your company's commitment to sustainability?"</h3>
+    
+   <span id="answer5" style="display: none; background-color: white; color: black;"> Answer: Our company is dedicated to sustainability through initiatives such as using eco-friendly materials, reducing carbon footprint in our operations, and partnering with environmentally conscious suppliers.</span>
+
+
+
+   
+   <!-- <details>
+      <summary>
+         <h1>Todo list:</h1>
+      </summary>
+      <p>Study</p>
+      <p>Grocery Shop</p>
+      <p>Clean The House</p>
+   </details> -->
+     
+</div>
+</div>
+
+<!-- <script>
+ function myAnswer() {
+  let answer = document.getElementById('answer');
+  if (answer.style.display === 'none') {
+    answer.style.display = 'block';
+  } else {
+    answer.style.display = 'none';
+  }
+}
+function secondAnswer() {
+   let answer = document.getElementById('answer2');
+   if (answer.style.display === 'none') {
+      answer.style.display = 'block';
+   } else {
+      answer.style.display = 'none';
+   }
+}
+
+function thirdAnswer() {
+   let answer = document.getElementById('answer3');
+   if (answer.style.display === 'none') {
+      answer.style.display = 'block';
+   } else {
+      answer.style.display = 'none';
+   }
+}
+function fourthAnswer() {
+   let answer = document.getElementById('answer4');
+   if (answer.style.display === 'none') {
+      answer.style.display = 'block';
+   } else {
+      answer.style.display = 'none';
+   }
+}
+function fifthAnswer() {
+ let answer = document.getElementById('answer5');
+ if (answer.style.display === 'none') {
+   answer.style.display = 'block';
+ } else {
+   answer.style.display = 'none';
+ }
+}
+</script> -->
+<script>
+   let lastOpened = null;
+
+   function myAnswer (answerId) {
+       let answer = document.getElementById(answerId);
+
+       if (lastOpened && lastOpened !== answer) {
+           lastOpened.style.display = 'none';
+      }
+
+       if (answer.style.display === 'none') {
+           answer.style.display = 'block';
+           lastOpened = answer;
+       } else {
+           answer.style.display = 'none';
+           lastOpened = null;
+       }
+   }
+</script>
+
+</body>
+</html>

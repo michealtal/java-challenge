@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>answer card</title>
+    <link rel="stylesheet" href="../challange 6/myStyle.css">
+</head>
+<body>
+<div class="card">
+    <div class="typewriter">
+        <h1>FAQ <br/>FREQUENTLY - ASKED-QUESTION</h1>
+    </div>
+    <div>
+        <div class="question" onclick="toggleAnswer('answer1')">
+            <h3>Question 1: "What sets your company apart from your competitors?"</h3>
+        </div>
+        <span id="answer1" style="display: none; background-color: white; color: black;">Answer: Our company differentiates itself through our innovative approach, exceptional customer service, and commitment to sustainability.</span>
+
+        <!-- Repeat the structure for other questions -->
+        <div class="question" onclick="toggleAnswer('answer2')">
+            <h3>Question 2: "How can I get in touch with your customer support team?"</h3>
+        </div>
+        <span id="answer2" style="display: none; background-color: white; color: black;">Answer: You can reach our customer support team by phone, email, or through our online chat feature on our website.</span>
+
+        <!-- Add more questions and answers in the same format -->
+
+    </div>
+</div>
+
+<script>
+    let lastOpened = null;
+
+    function toggleAnswer(answerId) {
+        let answer = document.getElementById(answerId);
+
+        if (lastOpened && lastOpened !== answer) {
+            lastOpened.style.display = 'none';
+        }
+
+        if (answer.style.display === 'none') {
+            answer.style.display = 'block';
+            lastOpened = answer;
+        } else {
+            answer.style.display = 'none';
+            lastOpened = null;
+        }
+    }
+</script>
+
+</body>
+</html>
